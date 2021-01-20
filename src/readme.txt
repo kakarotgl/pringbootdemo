@@ -1,0 +1,5 @@
+http://localhost:8888/demo/
+使用mysql的longblob字段保存文件：
+saveBlobImg
+读取mysql的longblob的文件：
+showPicture
