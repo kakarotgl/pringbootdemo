@@ -2,3 +2,4 @@
 saveBlobImg
 读取mysql的longblob的文件：
 showPicture
+aaa
