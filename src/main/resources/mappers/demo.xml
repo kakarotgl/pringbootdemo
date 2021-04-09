@@ -4,16 +4,4 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.MysqlBlobMapper">
 
-    <insert id="saveBlobImg" parameterType="com.example.demo.bean.ImgEntity">
-        insert into t_file_content (id,filename, content)
-        values (#{id,jdbcType=VARCHAR},#{filename,jdbcType=VARCHAR},#{content,jdbcType=BINARY})
-  </insert>
-
-    <select id="showPicture" parameterType="String" resultType="map">
-        select content from t_file_content where id=#{id}
-    </select>
-
-    <select id="getFileName" parameterType="String" resultType="String">
-        select filename from t_file_content where id=#{id}
-    </select>
 </mapper>
