@@ -18,7 +18,6 @@ public class UserAspect {
     public void pintCut(){
 
     }
-
     /**4、申明一个Advice通知
      * * 申明before通知,在pintCut切入点前执行
      * * 通知与切入点表达式相关联，
