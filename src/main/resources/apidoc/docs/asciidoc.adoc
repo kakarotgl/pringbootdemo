@@ -1,0 +1,382 @@
+= boot lanunch 项目 API文档
+
+
+[[_overview]]
+== 概览
+简单优雅的restfun风格
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 1.0
+
+
+=== 许可信息
+[%hardbreaks]
+__服务条款__ : http://www.zimug.com
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8888
+__基础路径__ : /
+
+
+=== 标签
+
+* article-controller : Article Controller
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_article-controller_resource]]
+=== Article-controller
+Article Controller
+
+
+[[_savearticleusingpost_1]]
+==== saveArticle
+....
+POST /rest/articles
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**article** +
+__必填__|article|<<_article,Article>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_6a07b703827829ce0440539d0e6e4d8d,通用响应数据结构类>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/rest/articles
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "author" : "string",
+  "content" : "string",
+  "createTime" : "string",
+  "id" : 0,
+  "reader" : [ {
+    "age" : 0,
+    "name" : "string"
+  } ],
+  "title" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "200、400、500",
+  "data" : "object",
+  "isok" : false,
+  "message" : "string"
+}
+----
+
+
+[[_updatearticleusingput]]
+==== updateArticle
+....
+PUT /rest/articles
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Body**|**article** +
+__必填__|article|<<_article,Article>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_6a07b703827829ce0440539d0e6e4d8d,通用响应数据结构类>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/rest/articles
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "author" : "string",
+  "content" : "string",
+  "createTime" : "string",
+  "id" : 0,
+  "reader" : [ {
+    "age" : 0,
+    "name" : "string"
+  } ],
+  "title" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "200、400、500",
+  "data" : "object",
+  "isok" : false,
+  "message" : "string"
+}
+----
+
+
+[[_getarticleusingget]]
+==== getArticle
+....
+GET /rest/articles/{id}
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Path**|**id** +
+__必填__|id|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_6a07b703827829ce0440539d0e6e4d8d,通用响应数据结构类>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/rest/articles/0
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "200、400、500",
+  "data" : "object",
+  "isok" : false,
+  "message" : "string"
+}
+----
+
+
+[[_deletearticleusingdelete]]
+==== deleteArticle
+....
+DELETE /rest/articles/{id}
+....
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Path**|**id** +
+__必填__|id|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_6a07b703827829ce0440539d0e6e4d8d,通用响应数据结构类>>
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/rest/articles/0
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "200、400、500",
+  "data" : "object",
+  "isok" : false,
+  "message" : "string"
+}
+----
+
+
+
+
+[[_definitions]]
+== 定义
+
+[[_article]]
+=== Article
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**author** +
+__可选__|**样例** : `"string"`|string
+|**content** +
+__可选__|**样例** : `"string"`|string
+|**createTime** +
+__可选__|**样例** : `"string"`|string (date-time)
+|**id** +
+__可选__|**样例** : `0`|integer (int64)
+|**reader** +
+__可选__|**样例** : `[ "<<_reader>>" ]`|< <<_reader,Reader>> > array
+|**title** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_reader]]
+=== Reader
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**age** +
+__可选__|**样例** : `0`|integer (int32)
+|**name** +
+__可选__|**样例** : `"string"`|string
+|===
+
+
+[[_6a07b703827829ce0440539d0e6e4d8d]]
+=== 通用响应数据结构类
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|请求响应状态码 +
+**样例** : `"200、400、500"`|integer (int32)
+|**data** +
+__可选__|请求结果数据 +
+**样例** : `"object"`|object
+|**isok** +
+__可选__|请求是否处理成功 +
+**样例** : `false`|boolean
+|**message** +
+__可选__|请求结果描述信息 +
+**样例** : `"string"`|string
+|===
+
+
+
+
+
