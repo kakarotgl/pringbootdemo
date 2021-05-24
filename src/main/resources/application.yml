@@ -26,5 +26,11 @@ spring:
 mybatis:
   mapper-locations: classpath:mappers/*xml
 
+# minio 文件存储配置信息
+minio:
+  endpoint: http://120.78.217.97:9000
+  accesskey: minioadmin
+  secretKey: minioadmin
+
 
 
